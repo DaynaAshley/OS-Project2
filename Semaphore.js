@@ -17,9 +17,7 @@ class Semaphore{
 
             d.remove();
             chairs.innerHTML="";
-            chairs.appendChild(d);
-           // console.log("space",this.space);
-            
+            chairs.appendChild(d);            
         }        
        
         if (this.count<0){
@@ -76,13 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           
             },8000);
-
-        
-            
-      
    
-            setTimeout(function(){
-           
+            setTimeout(function(){     
                 let index=0;
                 
               while(s.ready.length!=0){
@@ -93,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             chair.innerHTML="";
                             chair.append(d);
                             d.style.backgroundColor="green";
-                            let time=Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
+                            let time=Math.floor(Math.random() * (4000 - 1000 + 1)) + 1000;
+                            let time1=Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
                             setTimeout(function(){
                                 d.style.backgroundColor="red";
                                 setTimeout(function(){
@@ -101,13 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     d.remove();
                                     chair.innerHTML="Available Chair";
                                 },time);
-                            },time);
+                            },time1);
     
                         }
                         
                         s.ready.shift();
-                   
-                    
                     }
                 
                 }        
