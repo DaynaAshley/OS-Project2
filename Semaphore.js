@@ -6,6 +6,7 @@ class Semaphore{
         this.space=count;
         this.constant=count;
       }
+      
       semWait(x) {
         this.count=this.count-1;
         let chairs=document.querySelector('#chairs'+this.space);
@@ -29,7 +30,7 @@ class Semaphore{
             this.queue.push(x);
         }
         
-      }
+    }
 
       semSignal(x,time){
           console.log("signal",this.count);
@@ -58,8 +59,6 @@ class Semaphore{
 
 document.addEventListener('DOMContentLoaded', () => {
     let start= document.querySelector('.sbtn');
-    
-    
     start.addEventListener('click', () =>{ 
         let p=document.querySelector('#process').value;
         let n=document.querySelector('#sem').value;
@@ -76,44 +75,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 s.semSignal(b,(Math.floor(Math.random() * (6000 - 1000 + 1)) + 1000));
             }
           
-            ;},8000);
+            },8000);
 
         
-      ;
-        setTimeout(function(){
-           
-            let index=0;
-            let te=0;
-            let tr=0;
-          while(s.ready.length!=0){
-                console.log("Final count",s.ready);
-               if (tr!=0 || te==0){
-                for (let r=1;r<=n;r++){   
-                    te++;
-                    if (document.querySelector('#chairs'+r).innerHTML=="Available Chair"){
-                        let d=document.querySelector('#client'+s.ready[index]);
-                        //console.log(s.ready[a]);
-                        let chair=document.querySelector('#chairs'+r);
-                        chair.innerHTML="";
-                        chair.append(d);
-                        d.style.backgroundColor="green";
-                        let time=Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
-                        setTimeout(function(){
-                            d.style.backgroundColor="red";
-                            tr=setTimeout(function(){
-                                d.remove();
-                                chair.innerHTML="Available Chair";
-                            },time);
-                        },time);
-
-                    }
-                    console.log("timer",te);
-                    s.ready.shift();
-               
-                }
-            }
             
-            }        
-        },21000);
-
+      
+   
+            setTimeout(function(){
+           
+                let index=0;
+                
+              while(s.ready.length!=0){
+                    for (let r=1;r<=n;r++){   
+                        if (document.querySelector('#chairs'+r).innerHTML=="Available Chair"){
+                            let d=document.querySelector('#client'+s.ready[index]);
+                            let chair=document.querySelector('#chairs'+r);
+                            chair.innerHTML="";
+                            chair.append(d);
+                            d.style.backgroundColor="green";
+                            let time=Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
+                            setTimeout(function(){
+                                d.style.backgroundColor="red";
+                                setTimeout(function(){
+                                    d.remove();
+                                    chair.innerHTML="Available Chair";
+                                },time);
+                            },time);
+    
+                        }
+                        
+                        s.ready.shift();
+                   
+                    
+                    }
+                
+                }        
+            },21000);
+    
+        });
     });
+
+    
+        
