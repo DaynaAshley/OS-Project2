@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Race Condition Simulator</title>
+    <link rel="stylesheet" href="racecond.css" />
+    <script src="racecond.js"></script>
+  </head>
+  <body>
+    <header>
+          <h1>Race Condition Simulator</h1>
+    </header>
+      <div class="ops">
+
+        <div class="grid-container">
+          <div class="grid-item" id = "p1"><h2> Process 1</h2><p id = "adds">(Adds 500)</p></div>
+          <div class="grid-item">
+            <h2> Processes' Shared Resource</h2>
+            
+            <p class = "current"> Current Value: <span id = "sharedresource" > 1000 </span></p>
+            <p class = "previous"> Previous Value: <span id = "previous" > -- </span></p>
+          </div>
+          <div class="grid-item" id ="p2"><h2> Process 2</h2><p id = "adds">(Adds 200)</p></div>  
+        </div>
+
+        <div>
+            <b style="color:#40B1C3; vertical-align:text-top;">⬤ <span id = "key">: Idle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b>
+            <b style="color:rgb(255, 157, 28); vertical-align:text-top;">⬤ <span id = "key">: Running&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b>
+            <b style="color:red; vertical-align:text-top;">⬤ <span id = "key">: Finished (First)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b>
+            <b style="color:rgba(0, 255, 13, 0.8); vertical-align:text-top;">⬤ <span id = "key">: Finished (Last)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b>
+        </div>
+
+
+        <form id = "updatef">
+        <label for = "updatesharedresource" id = "label">Update shared resource value (optional) :&nbsp;&nbsp;&nbsp;</label>
+        <input type= "number" name = "updatesharedresource" id="update" placeholder="Enter an integer">
+        <button type="button" id="updateb" class="ubtn">Update</button>
+        </form>
+
+        <p id ="ints">Choose which process completes last</p>
+        <div id = "rbtns">
+          <form >
+            <input type="radio" name = "Process" id="process1" value="1">
+            <label for="process1">Process 1</label><br><br>
+            <input type="radio" name = "Process" id="process2" value="2">
+            <label for="process2">Process 2</label><br>
+            <br>
+            <button type="button" onclick= "start()">RUN</button>
+            <button type="button" onclick = "location.href=location.href">RESET</button>
+          </form>
+        </div>
+
+
+      </div>
+ 
+  </body>
+</html>
