@@ -1,208 +1,198 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Peterson's Algorithm</title>
-    <meta charset="UTF-8">
+<title>Peterson's Algorithm</title>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    <link rel="stylesheet" href="paterson.css">
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function algorithmworks() {
-            setTimeout(() => {
+<link rel="stylesheet" href="peterson.css">
+<script> 
+function algorithmworks() {
+  setTimeout(() => {
+  
+  document.getElementById("para").innerHTML = "Producer is ready"
+  document.getElementById("para1").innerHTML = "Producer is ready"
+  document.getElementById("f1").style.backgroundColor = "green";
+  document.getElementById("f2").style.backgroundColor = "red";
 
-                document.getElementById("para").innerHTML = "Producer is ready"
-                document.getElementById("para1").innerHTML = "Producer is ready"
-                document.getElementById("f1").style.backgroundColor = "green";
-                document.getElementById("f2").style.backgroundColor = "red";
+}, 1000); 
 
-            }, 1000);
+setTimeout(() => {
+  
+  document.getElementById("para").innerHTML = "Job 9 has been produced"
+  document.getElementById("para2").innerHTML = "Job 9 has been produced"
+  document.getElementById("job9").innerHTML = "9"
 
-            setTimeout(() => {
+}, 2000);
+setTimeout(() => {
+  
+  document.getElementById("para").innerHTML = "Producer will wait 1 second"
+  document.getElementById("para3").innerHTML = "Producer will wait 1 second"
+}, 3000); 
 
-                document.getElementById("para").innerHTML = "Job 9 has been produced"
-                document.getElementById("para2").innerHTML = "Job 9 has been produced"
-                document.getElementById("job9").innerHTML = "9"
+setTimeout(() => {
+  
+  document.getElementById("para").innerHTML = "Job 8 has been produced"
+  document.getElementById("para4").innerHTML = "Job 8 has been produced"
+  document.getElementById("job8").innerHTML = "8"
+}, 4000); 
 
-            }, 2000);
-            setTimeout(() => {
+setTimeout(() => {
+  
+  document.getElementById("para").innerHTML = "Producer will wait 2 second"
+  document.getElementById("para5").innerHTML = "Producer will wait 2 second"
+}, 5000); 
 
-                document.getElementById("para").innerHTML = "Producer will wait 1 second"
-                document.getElementById("para3").innerHTML = "Producer will wait 1 second"
-            }, 3000);
+setTimeout(() => {
+  
+  document.getElementById("para").innerHTML = "Producer is ready now"
+  document.getElementById("para6").innerHTML = "Producer is ready now"
 
-            setTimeout(() => {
+}, 7000); 
+setTimeout(() => {
+  
+  document.getElementById("para").innerHTML = "Job 13 is produced"
+  document.getElementById("para7").innerHTML = "Job 13 is produced"
+  document.getElementById("job13").innerHTML = "13"
+  document.getElementById("para").innerHTML = "Producer will wait 1 second"
+  document.getElementById("para8").innerHTML = "Producer will wait 1 second"
+}, 8000);
 
-                document.getElementById("para").innerHTML = "Job 8 has been produced"
-                document.getElementById("para4").innerHTML = "Job 8 has been produced"
-                document.getElementById("job8").innerHTML = "8"
-            }, 4000);
+setTimeout(() => {
+  
+ 
+  
+  document.getElementById("para").innerHTML = "Job 23 is produced"
+  document.getElementById("para9").innerHTML = "Job 23 is produced"
+  document.getElementById("job23").innerHTML = "23"
+  document.getElementById("para").innerHTML = "producer will wait 1 second"
+  document.getElementById("para10").innerHTML = "producer will wait 1 second"
+}, 9000);
 
-            setTimeout(() => {
+setTimeout(() => {
+  document.getElementById("f1").style.backgroundColor = "red";
+  document.getElementById("f1").innerHTML="Producer Flag=False"
+  document.getElementById("f2").style.backgroundColor = "green";
+  document.getElementById("f2").innerHTML="Consumer Flag=True"
+  document.getElementById('para').style.backgroundColor = "";
+  document.getElementById('paraf2').style.backgroundColor = "lightblue";
+  document.getElementById("paraf2").innerHTML = "Consumer is ready now"
+  document.getElementById("para11").innerHTML = "Consumer is ready now"
+}, 10000);
 
-                document.getElementById("para").innerHTML = "Producer will wait 2 second"
-                document.getElementById("para5").innerHTML = "Producer will wait 2 second"
-            }, 5000);
+setTimeout(() => {
+  
+  document.getElementById("paraf2").innerHTML = "Job 9 has been consumed"
+  document.getElementById("para12").innerHTML = "Job 9 has been consumed"
+  
+  
+}, 11000);
 
-            setTimeout(() => {
+setTimeout(() => {
+    var myobj = document.getElementById("job9");
+    myobj.remove();
+}, 12000);
 
-                document.getElementById("para").innerHTML = "Producer is ready now"
-                document.getElementById("para6").innerHTML = "Producer is ready now"
-
-            }, 7000);
-            setTimeout(() => {
-
-                document.getElementById("para").innerHTML = "Job 13 is produced"
-                document.getElementById("para7").innerHTML = "Job 13 is produced"
-                document.getElementById("job13").innerHTML = "13"
-                document.getElementById("para").innerHTML = "Producer will wait 1 second"
-                document.getElementById("para8").innerHTML = "Producer will wait 1 second"
-            }, 8000);
-
-            setTimeout(() => {
-
-
-
-                document.getElementById("para").innerHTML = "Job 23 is produced"
-                document.getElementById("para9").innerHTML = "Job 23 is produced"
-                document.getElementById("job23").innerHTML = "23"
-                document.getElementById("para").innerHTML = "producer will wait 1 second"
-                document.getElementById("para10").innerHTML = "producer will wait 1 second"
-            }, 9000);
-
-            setTimeout(() => {
-                document.getElementById("f1").style.backgroundColor = "red";
-                document.getElementById("f1").innerHTML = "Producer Flag=False"
-                document.getElementById("f2").style.backgroundColor = "green";
-                document.getElementById("f2").innerHTML = "Consumer Flag=True"
-                document.getElementById('para').style.backgroundColor = "";
-                document.getElementById('paraf2').style.backgroundColor = "lightblue";
-                document.getElementById("paraf2").innerHTML = "Consumer is ready now"
-                document.getElementById("para11").innerHTML = "Consumer is ready now"
-            }, 10000);
-
-            setTimeout(() => {
-
-                document.getElementById("paraf2").innerHTML = "Job 9 has been consumed"
-                document.getElementById("para12").innerHTML = "Job 9 has been consumed"
-
-
-            }, 11000);
-
-            setTimeout(() => {
-                var myobj = document.getElementById("job9");
-                myobj.remove();
-            }, 12000);
-
-            setTimeout(() => {
-                document.getElementById("paraf2").innerHTML = "consumer will sleep for 9 seconds"
-                document.getElementById("para13").innerHTML = "consumer will sleep for 9 seconds"
-                document.getElementById("f2").style.backgroundColor = "red";
-                document.getElementById("f2").innerHTML = "Consumer Flag=False"
-                document.getElementById("f1").style.backgroundColor = "green";
-                document.getElementById("f1").innerHTML = "Producer Flag=True"
-
-
-            }, 13000);
-
-            setTimeout(() => {
-                document.getElementById('paraf2').style.backgroundColor = "";
-                document.getElementById('para').style.backgroundColor = "lightblue";
-                document.getElementById("para").innerHTML = "Producer is ready now"
-                document.getElementById("para14").innerHTML = "Producer is ready now"
-            }, 17000);
-
-            setTimeout(() => {
-                document.getElementById('para').style.backgroundColor = "lightblue";
-                document.getElementById("para").innerHTML = "Job 11 has been applied "
-                document.getElementById("para15").innerHTML = "Job 11 has been applied "
-                document.getElementById("job11").innerHTML = "11"
-            }, 18500);
-
-            setTimeout(() => {
-                document.getElementById('para').style.backgroundColor = "lightblue";
-                document.getElementById("para").innerHTML = "Producer will wait for 1 second"
-                document.getElementById("para16").innerHTML = "Producer will wait for 1 second"
-            }, 19800);
-
-            setTimeout(() => {
-                document.getElementById('para').style.backgroundColor = "lightblue";
-                document.getElementById("para").innerHTML = "The clcok ran out"
-                    //document.getElementById("para17").innerHTML = "The clcok ran out"
-            }, 20800);
+setTimeout(() => {
+    document.getElementById("paraf2").innerHTML = "consumer will sleep for 9 seconds"
+    document.getElementById("para13").innerHTML = "consumer will sleep for 9 seconds"
+    document.getElementById("f2").style.backgroundColor = "red";
+    document.getElementById("f2").innerHTML="Consumer Flag=False"
+    document.getElementById("f1").style.backgroundColor = "green";
+    document.getElementById("f1").innerHTML="Producer Flag=True"
 
 
-        }
-    </script>
-    <header>
-        <h1>Peterson's Algorithm Simulator</h1>
-        <div class="topnav">
-            <a href="dashboard.html">Home</a>
-            <a href="racecond.html">Race Conditions</a>
-            <a href="HomePage.html">Semaphores</a>
-            <a href="dekker.html">Dekker's Algorithm</a>
+}, 13000);
 
-        </div>
-    </header>
-    <h2 style="text-align: center;"> Peterson Solution Algorithm and Process Synchronization </h2>
-    <div class="flex-parent jc-center"> <button class="button button1" type="button" onclick="algorithmworks()" style="margin-right:25px;">Algorithm works</button>
-        <button class="button button2" type="button" onclick="myFunction2()">Algorithm doesnt works</button> </div>
+setTimeout(() => {
+    document.getElementById('paraf2').style.backgroundColor = "";
+    document.getElementById('para').style.backgroundColor = "lightblue";
+    document.getElementById("para").innerHTML = "Producer is ready now"
+    document.getElementById("para14").innerHTML = "Producer is ready now"
+}, 17000);
+
+setTimeout(() => {
+    document.getElementById('para').style.backgroundColor = "lightblue";
+    document.getElementById("para").innerHTML = "Job 11 has been applied "
+    document.getElementById("para15").innerHTML = "Job 11 has been applied "
+    document.getElementById("job11").innerHTML = "11"
+}, 18500);
+
+setTimeout(() => {
+  document.getElementById('para').style.backgroundColor = "lightblue";
+    document.getElementById("para").innerHTML = "Producer will wait for 1 second"
+    document.getElementById("para16").innerHTML = "Producer will wait for 1 second"
+}, 19800);
+
+setTimeout(() => {
+  document.getElementById('para').style.backgroundColor = "lightblue";
+    document.getElementById("para").innerHTML = "The clcok ran out"
+    //document.getElementById("para17").innerHTML = "The clcok ran out"
+}, 20800);
+
+
+}
 
 
 
-    <div class="grid-container">
+</script>
+<h2 style="text-align: center;"> Peterson Solution Algorithm and Process Synchronization </h2> 
+<div class="flex-parent jc-center"> <button class="button button1" type="button" onclick="algorithmworks()" style="margin-right:25px;">Algorithm works</button> 
+<button  class="button button2" type="button" onclick="myFunction2()">Algorithm doesnt works</button> </div>
 
-        <div class="grid-child purple vertical-center">
-            <h2 style="text-align: center;">Buffer </h2>
 
-            <div id="job11" class="grid-item">0</div>
-            <div id="job23" class="grid-item">0</div>
-            <div id="job13" class="grid-item">0</div>
-            <div id="job8" class="grid-item">0</div>
-            <div id="job9" class="grid-item">0</div>
 
-        </div>
+<div class="grid-container">
 
-        <div class="grid-child green">
-            <p id="f1">Producer Flag=True</p>
-
-            <p class="pp" id="para1"> </p>
-            <p class="pp" id="para2"> </p>
-            <p class="pp" id="para3"> </p>
-            <p class="pp" id="para4"> </p>
-            <p class="pp" id="para5"> </p>
-            <p class="pp" id="para6"> </p>
-            <p class="pp" id="para7"> </p>
-            <p class="pp" id="para8"> </p>
-            <p class="pp" id="para9"> </p>
-            <p class="pp" id="para10"> </p>
-            <p class="pp" id="para14"> </p>
-            <p class="pp" id="para15"> </p>
-            <p class="pp" id="para16"> </p>
-
-            <p id="para" style="background-color: lightblue;"> </p>
-
-        </div>
-        <div class="grid-child green">
-            <p class="pp" id="f2"> Consumer Flag=False</p>
-            <p class="pp" id="para11"> </p>
-            <p class="pp" id="para12"> </p>
-            <p class="pp" id="para13"> </p>
-            <p class="pp" id="paraf2"> </p>
-        </div>
-
+    <div class="grid-child purple vertical-center">
+        <h2 style="text-align: center;">Buffer </h2>
+    
+        <div id="job11" class="grid-item">0</div>
+        <div id="job23" class="grid-item">0</div>  
+        <div id="job13" class="grid-item">0</div>
+        <div id="job8" class="grid-item">0</div>
+        <div id="job9" class="grid-item">0</div>  
 
     </div>
 
-    <div>
+    <div class="grid-child green">
+        <p id="f1">Producer Flag=True</p>
+    
+    <p class="pp" id="para1"> </p>
+     <p class="pp" id="para2"> </p>
+    <p class="pp" id="para3"> </p>
+    <p class="pp"  id="para4"> </p>
+    <p class="pp"  id="para5"> </p>
+    <p class="pp" id="para6"> </p>
+    <p class="pp" id="para7"> </p>
+    <p class="pp"  id="para8"> </p>
+    <p class="pp"  id="para9"> </p>
+    <p class="pp" id="para10"> </p>
+    <p class="pp" id="para14"> </p>
+    <p class="pp"  id="para15"> </p>
+    <p class="pp" id="para16"> </p> 
 
-
+    <p id="para" style="background-color: lightblue;"> </p>
+    
     </div>
+    <div class="grid-child green"> 
+      <p class="pp" id="f2"> Consumer Flag=False</p>
+      <p class="pp" id="para11"> </p>
+      <p class="pp"  id="para12"> </p>
+      <p class="pp"  id="para13"> </p>
+      <p class="pp" id="paraf2"> </p>
+    </div>
+    
+  
+</div>
+
+<div>
+    
+   
+</div>
 
 
 
 
-    </body>
-
+</body>
 </html>
