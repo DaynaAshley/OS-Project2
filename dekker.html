@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="classic.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function myFunction() {
+            document.getElementById("indicator2").innerHTML = "Process 1"
+            document.getElementById("indicator2").style.backgroundColor = "lightblue";
+            var image = document.getElementById("myImage");
+            var image2 = document.getElementById("myImage2");
+            change()
+
+
+
+            setTimeout(() => {
+                num = parseInt(document.getElementById("in").innerHTML)
+                document.getElementById("in").innerHTML = num + 1
+            }, 6500);
+
+            setTimeout(() => {
+                image.src = "pic_bulboff.gif";
+            }, 6500);
+
+            setTimeout(() => {
+                changep2()
+            }, 6500);
+
+            setTimeout(() => {
+                document.getElementById("indicator2").innerHTML = "Process 2"
+                document.getElementById("indicator2").style.backgroundColor = "lightgreen";
+                image2.src = "pic_bulbon.gif";
+            }, 7000);
+
+            setTimeout(() => {
+                num = parseInt(document.getElementById("in").innerHTML)
+                document.getElementById("in").innerHTML = num + 1
+            }, 13000);
+
+            setTimeout(() => {
+                image2.src = "pic_bulboff.gif";
+            }, 13500);
+
+            setTimeout(() => {
+                image2.src = "pic_bulboff.gif";
+                image.src = "pic_bulboff.gif";
+            }, 14000);
+
+            function change() {
+                let animation1 = anime({
+                    targets: '#content',
+                    translateY: [{
+                            value: 180,
+                            duration: 500
+                        }, {
+                            value: 160,
+                            duration: 400,
+                            delay: 1500
+                        }, {
+                            value: 240,
+                            duration: 500,
+                            delay: 500
+                        }, {
+                            value: -40,
+                            duration: 500,
+                            delay: 2500
+                        },
+
+                    ],
+                    translateX: [{
+                            value: 610,
+                            duration: 800,
+                            delay: 1000
+                        }, {
+                            value: 10,
+                            duration: 900,
+                            delay: 2500
+                        },
+                        // {value: -53, duration: 500, delay: 500},
+                        //{value: 0, duration: 500, delay: 2500} 
+                    ],
+                    easing: 'linear',
+                    begin: function() {
+                        box.style.borderBottom = "none";
+                    },
+                    complete: function() {
+                        box.style.borderBottom = "solid darkorange 3px";
+                    }
+                });
+            }
+
+
+            function changep2() {
+                let animation2 = anime({
+                    targets: '#blue',
+
+                    translateY: [{
+                            value: 200,
+                            duration: 500
+                        }, {
+                            value: 150,
+                            duration: 500,
+                            delay: 1500
+                        }, {
+                            value: 250,
+                            duration: 500,
+                            delay: 500
+                        }, {
+                            value: -30,
+                            duration: 500,
+                            delay: 2500
+                        },
+
+                    ],
+                    translateX: [{
+                            value: -468,
+                            duration: 800,
+                            delay: 1000
+                        }, {
+                            value: 10,
+                            duration: 900,
+                            delay: 2500
+                        },
+
+                    ],
+                    easing: 'linear',
+                    begin: function() {
+                        box.style.borderBottom = "none";
+                    },
+                    complete: function() {
+                        box.style.borderBottom = "solid darkorange 3px";
+                    }
+                });
+            }
+        }
+
+        function myFunction2() {
+            setTimeout(() => {
+                var image2 = document.getElementById("myImage2");
+                image2.src = "pic_bulbon.gif";
+                image.src = "pic_bulbon.gif";
+            }, 1000);
+
+            setTimeout(() => {
+                alert("The algorithm is in a deadlock as both program lights are on and the system does not know which process to give the go ahead");
+            }, 2500);
+
+
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+
+
+
+
+
+
+
+
+
+
+
+            /*     let animation = anime({
+                   targets: '#rod',
+                   rotate: [60, -60],
+                   duration: 30000,
+                   easing: 'easeInOutSine',
+                   direction: 'alternate',
+                   loop: true,
+                   delay:5000,
+                 });      
+                 let box = document.querySelector('#box');  */
+
+
+
+            function change() {
+                let animation1 = anime({
+                    targets: '#content',
+                    translateY: [{
+                            value: 180,
+                            duration: 500
+                        }, {
+                            value: 160,
+                            duration: 400,
+                            delay: 1500
+                        }, {
+                            value: 240,
+                            duration: 500,
+                            delay: 500
+                        }, {
+                            value: -40,
+                            duration: 500,
+                            delay: 2500
+                        },
+
+                    ],
+                    translateX: [{
+                            value: 556,
+                            duration: 800,
+                            delay: 1000
+                        }, {
+                            value: 10,
+                            duration: 900,
+                            delay: 2500
+                        },
+                        // {value: -53, duration: 500, delay: 500},
+                        //{value: 0, duration: 500, delay: 2500} 
+                    ],
+                    easing: 'linear',
+                    begin: function() {
+                        box.style.borderBottom = "none";
+                    },
+                    complete: function() {
+                        box.style.borderBottom = "solid darkorange 3px";
+                    }
+                });
+            }
+
+
+            function changep2() {
+                let animation2 = anime({
+                    targets: '#blue',
+
+                    translateY: [{
+                            value: 200,
+                            duration: 500
+                        }, {
+                            value: 150,
+                            duration: 500,
+                            delay: 1500
+                        }, {
+                            value: 250,
+                            duration: 500,
+                            delay: 500
+                        }, {
+                            value: -30,
+                            duration: 500,
+                            delay: 2500
+                        },
+
+                    ],
+                    translateX: [{
+                            value: -518,
+                            duration: 800,
+                            delay: 1000
+                        }, {
+                            value: 10,
+                            duration: 900,
+                            delay: 2500
+                        },
+
+                    ],
+                    easing: 'linear',
+                    begin: function() {
+                        box.style.borderBottom = "none";
+                    },
+                    complete: function() {
+                        box.style.borderBottom = "solid darkorange 3px";
+                    }
+                });
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Semaphore Simulator</h1>
+
+        </div>
+        <div class="topnav">
+            <a href="dashboard.html">Home</a>
+            <a href="racecond.html">Race Conditions</a>
+            <a href="HomePage.html">Semaphores</a>
+            <a href="peterson.html">Peterson's Algorithm</a>
+        </div>
+    </header>
+    <div class="heading">
+        <h2 id="da">Dekker's Algorithm </h2>
+        <p id="demo"></p>
+
+        <div class="center flex-parent jc-center">
+            <button class="button button1" type="button" onclick="myFunction()" style="margin-right:25px;">Algorithm works</button>
+            <button class="button button2" type="button" onclick="myFunction2()">Algorithm doesnt works</button>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div id="outer" style="border-color: black;">
+
+        <div id="box1">
+            <h2 id="process"> Program 1</h2>
+            <img id="myImage" src="pic_bulbon.gif" alt="bulb1" width="100" height="180"> </div>
+
+        <div>
+            <!-- <div id="pivot"></div>
+    <div id="ball"></div> -->
+            <p id="indicator">Turn Indicator: </p>
+            <p id="indicator2"> </p>
+        </div>
+
+        <div id="box2" style="padding-left: 110px;">
+            <h2 id="process2"> Program 2</h2>
+            <img id="myImage2" alt="bulb2" src="pic_bulboff.gif" width="100" height="180"> </div>
+    </div>
+
+
+
+    <div class="square" id="blue"></div>
+    <div class="crit2" id="content"></div>
+
+
+    <div class="bottom">
+        <h2 class="num"> Critical Section</h2>
+        <h2 class="num" id="in"> 8</h2>
+        <br> <br> <br>
+        <div class="crit" id="box"></div>
+
+    </div>
+
+</body>
+
+</html>

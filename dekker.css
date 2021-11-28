@@ -1,0 +1,156 @@
+.center {display: flex;
+  justify-content: center;
+  align-items: center;}
+#myImage, #process{
+  margin-left: -160px;
+}
+#myImage2, #process2{
+  margin-left: 190px;
+}
+#da{text-align: center;}
+button{ position: relative;}
+#outer{
+    white-space: nowrap; 
+    display: flex;
+    align-content: center;
+    border-color: 3px black;
+    padding-left: 200px;
+  }
+#box1{
+    display: inline;}
+    #rod {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 2px;
+        height: 150px;
+        border-radius: 5px;
+        transform-origin: 50% 0%;
+        transform: rotate(60deg);
+        background-color: green;
+      }
+
+      #pivot {
+        position: inline;
+        top: -55px;
+        left: -33px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: black;
+      }
+      
+      #ball {
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: orange;
+      }
+      .crit {
+        
+        width: 50px;
+        height: 50px;
+        top: 100px;
+        left: 70px;
+        margin-top: 10;
+        margin-right: 30px;
+        background-color: palevioletred;
+        
+      }
+      .crit2 {
+       
+        pointer-events: none;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: cornflowerblue;
+        margin-left: -1130px;
+        display: inline-block;
+        background-color: palevioletred;
+        
+      }
+      
+      #box {
+        background-color: lightgreen;
+        border: solid darkorange 3px;
+        margin-left: 60px;
+        margin-top: -70px;
+      }
+      #content{
+        margin-top: 40px;
+        margin-right: -30px;
+      }
+      .bottom{
+        
+        border-style: solid;
+        padding-left: 50px;
+        text-align: center;
+        height: 250px;
+        margin: auto;
+  width: 250px;
+      }
+      .square {
+        pointer-events: none;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: cornflowerblue;
+        margin-left: 1125px;
+        display: inline-block;
+        
+      }
+      #blue {
+        background: blue;
+      }
+      .flex-container {
+        display: flex;
+    }
+    .flex-child {
+      flex: 1;
+      border: 2px solid yellow;
+  }  
+  
+  .flex-child:first-child {
+      margin-right: 20px;
+  }
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+  }
+  .button1 {background-color: #4CAF50;} 
+  .button2 {background-color: #008CBA;}  
+  
+  button:hover {
+    background-color: black;
+  } 
+  
+  .flex-parent {
+    display: flex;
+  }
+  
+  .jc-center {
+    justify-content: center;
+  }
+  
+  button.margin-right {
+    margin-right: 20px;
+  }
+  .num{
+    margin-left: -70px;
+  }
+   #indicator,#indicator2{
+    margin-left: 370px;
+    font-size: 40px;
+    text-align: center;
+  } 

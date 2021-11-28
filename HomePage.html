@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Semaphore Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="Simulator.js"></script>
+    <script src="Semaphore.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="container">
+            <h1>Semaphore Simulator</h1>
+
+        </div>
+        <div class="topnav">
+            <a href="dashboard.html">Home</a>
+            <a href="racecond.html">Race Conditions</a>
+            <a href="dekker.html">Dekker's Algorithm</a>
+            <a href="peterson.html">Peterson's Algorithm</a>
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+
+        <div class="indexes">
+            <p>Enter variables:</p>
+            <input type="text" id="sem" name="sem" placeholder="Enter semaphore initializer...">
+            <input type="text" id="process" name="process" placeholder="Enter number of processes...">
+            <button type="button" id="variablesbtn" class="vbtn">Okay</button>
+            <button type="button" id="startbtn" class="sbtn">Start</button>
+            <button type="button" id="cleartbtn" class="cbtn">Clear</button>
+
+            <h2>Simulation</h2>
+            <hr>
+            <div class='type'></div>
+            <div class="input-color">
+                <h3>Process States : </h3>
+
+                <div class='label'>
+                    <li><label>Active</label> </li>
+                    <div class="color-box" style="background-color: black"></div>
+                    <li><label>Critical Section</label> </li>
+                    <div class="color-box" style="background-color: green"></div>
+                    <li><label>Blocked</label> </li>
+                    <div class="color-box" style="background-color: yellow"></div>
+                    <li><label>Finished</label> </li>
+                    <div class="color-box" style="background-color: red"></div>
+                </div>
+            </div>
+            <p>Barbers:</p>
+            <div id="shop"></div>
+            <div id="chair"></div>
+            <p id="c">Clients:</p>
+            <div id="clients"></div>
+            <div id="waiting"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>
