@@ -93,10 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             chair.innerHTML="";
                             chair.append(d);
                             d.style.backgroundColor="green";
-                            let time=Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
+                            let time=Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
                             setTimeout(function(){
                                 d.style.backgroundColor="red";
                                 setTimeout(function(){
+                                    let chair=d.parentElement;
                                     d.remove();
                                     chair.innerHTML="Available Chair";
                                 },time);
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 
                 }        
-            },21000);
+            },19000);
     
         });
     });
