@@ -1,12 +1,13 @@
 class Semaphore{
     constructor(count) {
-        this.count = count;
+        this.count = count;  //initializes to a nonnegative integer valu
         this.queue = [];
         this.ready=[];
-        this.space=count;
+        this.space=count; 
         this.constant=count;
       }
       
+      //semWait operation decrements the semaphore value
       semWait(x) {
         this.count=this.count-1;
         let chairs=document.querySelector('#chairs'+this.space);
@@ -21,6 +22,7 @@ class Semaphore{
         }        
        
         if (this.count<0){
+            //places the blocked processes in the semaphore queue and blocks the process from entering their critical section
             this.space=this.constant;
             let d=document.querySelector('#client'+x);
             d.style.backgroundColor="yellow";
@@ -30,8 +32,8 @@ class Semaphore{
         
     }
 
+    //semSignal operation incrementss the semaphore value
       semSignal(x,time){
-          console.log("signal",this.count);
           let d=document.querySelector('#client'+x);
 
           this.count=this.count+1; 
@@ -41,14 +43,13 @@ class Semaphore{
               setTimeout(function(){
                     let chairs=d.parentElement;
                     d.remove();
-
-                  
                     chairs.innerHTML="Available Chair";
                     this.space--;
                 },time)
             },time);
             
         if (this.count<=0){
+            //removes the blocked processes from the semaphore queue and place them in the ready queue
             this.ready=this.queue;
         }
         
@@ -56,12 +57,13 @@ class Semaphore{
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    //gets the information from the simulator and begins the simulation
     let start= document.querySelector('.sbtn');
     start.addEventListener('click', () =>{ 
-        let p=document.querySelector('#process').value;
-        let n=document.querySelector('#sem').value;
+        let p=document.querySelector('#process').value; //number of processes
+        let n=document.querySelector('#sem').value; 
 
-        let s=new Semaphore(n);
+        let s=new Semaphore(n); //initializes the Semaphore
     
         for (let a=1;a<=p;a++){
             setTimeout(function(){s.semWait(a,n);},4000);
