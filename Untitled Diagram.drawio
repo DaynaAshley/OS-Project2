@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-22T17:58:43.926Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="DwMCYt1HcirQyYNjkHex" version="16.6.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-22T18:33:30.038Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="Mu7LPGaEcdok6GncwWLz" version="16.6.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1289" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="1771" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,9 +14,6 @@
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-2" value="Course" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="440" y="785" width="140" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-146" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ynPax30jrkAcBOTVVLco-3" target="ynPax30jrkAcBOTVVLco-145">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ynPax30jrkAcBOTVVLco-3" target="ynPax30jrkAcBOTVVLco-50">
           <mxGeometry relative="1" as="geometry" />
@@ -141,7 +138,7 @@
         <mxCell id="ynPax30jrkAcBOTVVLco-209" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ynPax30jrkAcBOTVVLco-13" target="ynPax30jrkAcBOTVVLco-208">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-13" value="Reply" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="ynPax30jrkAcBOTVVLco-13" value="Replies" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="832.5" y="485" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-14" value="Authentication System&amp;nbsp;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
@@ -334,9 +331,6 @@
         <mxCell id="ynPax30jrkAcBOTVVLco-135" value="session_id" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="862.5" y="185" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-145" value="type" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="582.5" y="205" width="70" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-157" value="stud_id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
           <mxGeometry x="576.25" y="410" width="80" height="30" as="geometry" />
         </mxCell>
@@ -369,11 +363,10 @@
         <mxCell id="ynPax30jrkAcBOTVVLco-172" value="faculty" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="441" y="365" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-175" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ynPax30jrkAcBOTVVLco-173" target="ynPax30jrkAcBOTVVLco-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-173" value="tel_num" style="ellipse;shape=doubleEllipse;margin=3;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="337.5" y="480" width="65" height="30" as="geometry" />
+        <mxCell id="ynPax30jrkAcBOTVVLco-175" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ynPax30jrkAcBOTVVLco-403" target="ynPax30jrkAcBOTVVLco-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="402.5000000000359" y="495" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-177" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ynPax30jrkAcBOTVVLco-176" target="ynPax30jrkAcBOTVVLco-5">
           <mxGeometry relative="1" as="geometry" />
@@ -415,7 +408,7 @@
         <mxCell id="ynPax30jrkAcBOTVVLco-208" value="reply_id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
           <mxGeometry x="807.5" y="420" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-210" value="id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+        <mxCell id="ynPax30jrkAcBOTVVLco-210" value="as_id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
           <mxGeometry x="360" y="710" width="55" height="20" as="geometry" />
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-213" value="format" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
@@ -553,7 +546,7 @@
             <mxPoint x="231.49999999999886" y="882.75" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-307" value="has" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="ynPax30jrkAcBOTVVLco-307" value="belong" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="132" y="866.75" width="65" height="31" as="geometry" />
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-311" value="type" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
@@ -667,7 +660,7 @@
         <mxCell id="ynPax30jrkAcBOTVVLco-374" value="" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="586.25" y="1170.75" width="67" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="ynPax30jrkAcBOTVVLco-375" value="Section Items" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="ynPax30jrkAcBOTVVLco-375" value="Section Item" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="567.5" y="1243.75" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-398" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ynPax30jrkAcBOTVVLco-376" target="ynPax30jrkAcBOTVVLco-397">
@@ -719,6 +712,9 @@
         </mxCell>
         <mxCell id="ynPax30jrkAcBOTVVLco-400" value="comments" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="981.5" y="485" width="87" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ynPax30jrkAcBOTVVLco-403" value="tel_no" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320.5" y="470" width="72" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
